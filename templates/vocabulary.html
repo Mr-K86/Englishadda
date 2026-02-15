@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vocabulary | English Adda</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<h1>📘 Vocabulary List</h1>
+
+<input type="text" id="searchInput" placeholder="Search words..." class="search-bar">
+
+<div class="vocab-container" id="vocabContainer">
+{% for word in words %}
+    <div class="card" data-category="{{ word.category }}">
+        <div class="word-header">
+            <div class="en">{{ word.english_word }}</div>
+            <div class="toggle-btn">+</div>
+        </div>
+
+        <div class="card-body">
+            <div class="hi">हिंदी: {{ word.hindi_meaning }}</div>
+            <div class="example">
+                <b>Example (EN):</b> {{ word.example_en }}<br>
+                <b>उदाहरण (HI):</b> {{ word.example_hi }}
+            </div>
+            <div class="category">
+                Category: {{ word.category }}
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+
+<!-- Link external JavaScript -->
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

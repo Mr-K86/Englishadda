@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>English Adda | Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- Floating letters background -->
+<div class="floating-letters">
+  <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span>
+  <span>F</span><span>G</span><span>H</span><span>I</span><span>J</span>
+</div>
+
+<!-- Main content -->
+<div class="home-container">
+    <h1>Welcome to English Adda 🇮🇳</h1>
+    <p class="subtitle">Learn English the easy way with Hindi meaning</p>
+
+    <div class="home-cards">
+        <div class="home-card" onclick="goToVocabulary()">
+            <div class="icon">📘</div>
+            <h2>Vocabulary</h2>
+            <p>View and learn your English vocabulary interactively.</p>
+        </div>
+
+        <div class="home-card" onclick="alert('Coming Soon!')">
+            <div class="icon">📝</div>
+            <h2>Quizzes</h2>
+            <p>Test your English skills with fun quizzes.</p>
+        </div>
+
+        <div class="home-card" onclick="alert('Coming Soon!')">
+            <div class="icon">⭐</div>
+            <h2>Favorites</h2>
+            <p>Bookmark your favorite words for quick revision.</p>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
